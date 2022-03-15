@@ -1,7 +1,7 @@
 from flask import Flask, url_for
 import os
 from waitress import serve
-from flask_ngrok import run_with_ngrok
+
 
 app = Flask(__name__)
 
@@ -72,9 +72,6 @@ def color_strings():
 
 
 if __name__ == '__main__':
-
-    #app.run(port=8080, host='127.0.0.1')
-    #serve(app, listen='0.0.0.0:8080')
-    # serve(app, host='0.0.0.0', port=8080)
+   
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    serve(app, host='0.0.0.0', port=port)
