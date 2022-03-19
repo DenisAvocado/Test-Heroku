@@ -1,1 +1,1 @@
-web: gunicorn app:Reklama_with_image
+web: gunicorn Reklama_with_image:app
